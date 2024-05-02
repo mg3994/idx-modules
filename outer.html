@@ -8,11 +8,13 @@
     border: 0;
   }
 </style>
-<iframe></iframe>
+<div class="iframe-holder"><iframe></iframe></div>
 <script>
   setTimeout(() => {
-    frame = document.querySelector('iframe');
+    frameHolder = document.querySelector('.iframe-holder');
+    frame = document.createElement("iframe");
     frame.src = "https://storage.googleapis.com/android-ci/inner3.html";
+    frameHolder.appendChild(frame);
     // frame.addEventListener('load', () => {
     //   requestAnimationFrame(() => {});
     // });
