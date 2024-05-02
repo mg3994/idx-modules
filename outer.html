@@ -1,5 +1,10 @@
+<iframe></iframe>
 <script>
   setTimeout(() => {
-    document.body.innerHTML = '<iframe src="https://storage.googleapis.com/android-ci/inner.html"></iframe>';
+    frame = document.querySelector('iframe');
+    frame.src = "https://storage.googleapis.com/android-ci/inner.html";
+    frame.addEventListener('load', () => {
+      requestAnimationFrame(() => {});
+    });
   }, 2000);
 </script>
