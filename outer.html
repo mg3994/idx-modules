@@ -1,7 +1,5 @@
 <script>
   setTimeout(() => {
-    frame = document.createElement('iframe');
-    frame.src = "https://storage.googleapis.com/android-ci/inner.html";
-    document.body.appendChild(frame);
+    document.body.innerHTML = '<iframe src="https://storage.googleapis.com/android-ci/inner.html"></iframe>;
   }, 5000);
 </script>
